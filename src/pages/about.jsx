@@ -33,7 +33,8 @@ function About() {
           others to look at. Edit them, And Delete one if needed.
         </li>
         <li className="list-group-item">
-          You can always edit your personal info we needed. Click the
+          You can always edit your personal info when needed. Click On Your
+          Profile Icon to view and edit your details
         </li>
       </ul>
       <div>

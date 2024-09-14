@@ -46,7 +46,7 @@ function Card({ data, fetchLikedCards }) {
       </Link>
       <div className="card-body">
         <h5 className="card-title text-capitalize">{data.title}</h5>
-        <p className="card-text">{data.Description}</p>
+        <p className="card-text">{data.description}</p>
       </div>
       <div className="card-body d-flex justify-content-between">
         <div
@@ -68,7 +68,7 @@ function Card({ data, fetchLikedCards }) {
           )}
         </div>
         <div
-          className={`card-link d-flex border p-1 rounded bg-dark-subtle ${
+          className={`card-link d-flex border p-1 rounded bg-dark-subtle align-items-center ${
             user === null
               ? "justify-content-end"
               : "justify-content-between w-25"

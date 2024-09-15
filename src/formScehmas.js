@@ -116,7 +116,6 @@ export const cardCreateValidateScehma = Joi.object({
     .label("Email"),
   web: Joi.string()
     .min(14)
-    .allow("")
     .pattern(webRegex)
     .message("web must be a standard URL")
     .label("Website"),

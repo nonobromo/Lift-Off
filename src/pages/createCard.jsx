@@ -124,19 +124,19 @@ function CreateCard() {
             label="Country"
             type="text"
             required
-            {...cardForm.getFieldProps("address.country")}
+            {...cardForm.getFieldProps("address?.country")}
             error={
               cardForm.touched.address.country &&
-              cardForm.errors["address.country"]
+              cardForm.errors["address?.country"]
             }
           />
           <Input
             label="City"
             type="text"
             required
-            {...cardForm.getFieldProps("address.city")}
+            {...cardForm.getFieldProps("address?.city")}
             error={
-              cardForm.touched.address.city && cardForm.errors["address.city"]
+              cardForm.touched.address.city && cardForm.errors["address?.city"]
             }
           />
         </div>
@@ -145,29 +145,29 @@ function CreateCard() {
             label="street"
             type="text"
             required
-            {...cardForm.getFieldProps("address.street")}
+            {...cardForm.getFieldProps("address?.street")}
             error={
               cardForm.touched.address.street &&
-              cardForm.errors["address.street"]
+              cardForm.errors["address?.street"]
             }
           />
           <Input
             label="House Number"
             type="number"
             required
-            {...cardForm.getFieldProps("address.houseNumber")}
+            {...cardForm.getFieldProps("address?.houseNumber")}
             error={
               cardForm.touched.address.houseNumber &&
-              cardForm.errors["address.houseNumber"]
+              cardForm.errors["address?.houseNumber"]
             }
           />
           <Input
-            {...cardForm.getFieldProps("address.zip")}
+            {...cardForm.getFieldProps("address?.zip")}
             label="ZIP"
             type="number"
             required
             error={
-              cardForm.touched.address.zip && cardForm.errors["address.zip"]
+              cardForm.touched.address.zip && cardForm.errors["address?.zip"]
             }
           />
         </div>

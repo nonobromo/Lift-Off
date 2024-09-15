@@ -13,9 +13,10 @@ function AdminPage({ search }) {
 
   const fetchAllUsers = async () => {
     const { data } = await usersService.getAllUsers();
-    setAllUsers(data);
+    setAllUsers(data.filter((user) => user.isAdmin === false));
   };
 
+  console.log(users);
   useEffect(() => {
     fetchAllUsers();
   }, []);
@@ -26,7 +27,9 @@ function AdminPage({ search }) {
       )
     : users;
 
-  const currentPosts = filteredUsers.slice(firstPostIndex, lastPostIndex);
+  const currentUsers = filteredUsers
+    .slice(firstPostIndex, lastPostIndex)
+    .filter((user) => user.isAdmin === false);
 
   const pagesToDisplay = Math.ceil(filteredUsers.length / postPerPage);
 
@@ -46,7 +49,7 @@ function AdminPage({ search }) {
         </ul>
 
         <ul className="list-group text-center mt-3">
-          {(search ? filteredUsers : currentPosts).map((user, i) => {
+          {(search ? filteredUsers : currentUsers).map((user, i) => {
             return (
               <UserListItem
                 key={user._id}
